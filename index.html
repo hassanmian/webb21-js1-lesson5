@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        let greeting = "Hello"
+        const library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                readingStatus: false
+            }
+        ];
+        console.log(greeting)
+        // This is a comment
+
+        function ourFunction() {
+            console.log("on Click")
+            // document.getElementById("demo").innerHTML = "Du har klickat på en rubrik"
+            const parent = document.getElementById("demo")
+            library.forEach(function(book) {
+                const child = document.createElement("p")
+                child.innerHTML = `${book.author}: ${book.title}`
+                parent.appendChild(child)
+            })
+            
+        }
+
+        function onHover() {
+            console.log("on Hover")
+        }
+    </script>
+</head>
+
+<body>
+    <h1 onmouseover="onHover()" onclick="ourFunction()">Hello World!</h1>
+    <p id="demo">
+
+    </p>
+    <p>
+        Hej allesammans!
+    </p>
+    <a href="#form">Länk till formulär</a>
+    <h2>En underrubrik</h2>
+    <h3>Rubrik på nivå 3</h3>
+    <h4>Rubrik på nivå 4</h4>
+    <h5>Rubrik på nivå 5</h5>
+    <h6>Rubrik på nivå 6</h6>
+    <p>
+        Jag håller på att <i>lära </i>mig <b>HTML.</b> <br />
+        <hr />
+        Och även lite Javascript.
+        <a href="https://dn.se" target="_blank">Här är en länk till DN</a>
+        <!-- Det här är en kommentar, som inte syns i webbläsaren -->
+        <img alt="En katt som räcker upp händerna"
+            src="https://media4.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif?cid=ecf05e47n065zl0bfykw5kpm7vidw33p20ymorf7br67wdj3&rid=giphy.gif&ct=g" />
+    </p>
+
+    <form id="form">
+        <div>
+            <label for="firstName">Fyll i ditt förnamn</label>
+            <input id="firstName" placeholder="John" name="first-name" />
+        </div>
+        <div>
+            <label for="lastName">Fyll i ditt efternamn</label>
+            <input id="lastName" name="last-name" />
+        </div>
+        <div>
+            <label>Telefon</label>
+            <input id="phone" name="phone" type="tel" />
+        </div>
+        <div>
+            <label>Lösenord</label>
+            <input id="password" name="password" type="password" />
+        </div>
+        <div>
+            <label>Datum</label>
+            <input id="date" name="date" type="date" />
+        </div>
+
+        <div>
+            <label for="cars">Välj din bil</label>
+            <select id="cars" name="cars">
+                <option value="1">Volvo</option>
+                <option value="2" selected>Saab</option>
+                <option value="3">Audi</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="fruits">Välj dina favorit frukter</label>
+            <select id="fruits" name="fruits" multiple>
+                <option value="1">Äpple</option>
+                <option value="2">Banan</option>
+                <option value="3">Mango</option>
+                <option value="4">Tomat</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="lifeStory">Din livshistoria</label>
+            <textarea rows="10" cols="50" name="lifeStory" id="lifeStory"></textarea>
+        </div>
+
+        <button type="submit">Skicka in</button>
+        <button type="reset">Nollställ</button>
+    </form>
+
+</body>
+
+</html>
